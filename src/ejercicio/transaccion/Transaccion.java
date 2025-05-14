@@ -44,6 +44,7 @@ public class Transaccion {
         System.out.println(suma);
         */
         
+        /*
         Double suma =
         
         transacciones.stream()
@@ -54,6 +55,16 @@ public class Transaccion {
         .sum();
         
         
+		System.out.println(suma);*/
+        
+        Double suma =
+        
+        transacciones.stream()
+        .filter(t -> "Alimentos".equals(t.categoria))
+        .map(t -> Optional.ofNullable(t.importe))
+        .mapToDouble(i -> i.orElse(0.0))
+        .sum();
+		
 		System.out.println(suma);
 		
 	}
