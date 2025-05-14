@@ -4,6 +4,7 @@ import java.util.ArrayList;
 import java.util.Comparator;
 import java.util.List;
 import java.util.Optional;
+import java.util.TreeSet;
 import java.util.function.Predicate;
 
 public class Utilidades {
@@ -149,7 +150,7 @@ public class Utilidades {
 		        );
 		    }
 		    
-		    System.out.println("\n-------- BUSCANDO PERSONA INEXISTENTE --------");
+		    System.out.println("\n-------- BUSCANDO PERSONA NO IGUAL --------");
 		    try {
 		        Persona personaNueva = new Persona();
 		        Optional<Persona> encontrada = Utilidades.personasIgual(listaPersonas, personaNueva);
@@ -161,8 +162,27 @@ public class Utilidades {
 		        System.out.println("Error creando persona de prueba: " + e.getMessage());
 		    }
 		
+		    
+		 /*   TreeSet<Persona> treeSetPersonas = new TreeSet<Persona>();
+		    
+				    
+		    for (int i = 0; i < 5; i++) {
+				try {
+					treeSetPersonas.add(new Persona());
+				} catch (ApellidosIgualesException e) {
+					System.out.println(e.getMessage());
+				}
+			}
+		    		    
+		    treeSetPersonas.forEach(System.out::println);*/
+		    
+		    
+		    
 	}
 
+	
+	
+	
 	
 	
 	
